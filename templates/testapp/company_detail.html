@@ -1,0 +1,21 @@
+<!doctype html>
+{% extends "testapp/base.html" %}
+
+{% block body_block %}
+<div class="container">
+    <div class="jumbotron">
+        <h1>Welcome to company : {{ object.name }}</h1>
+        <hr>
+        
+        <ol>
+            <li>Company Name : {{ object.name }}</li>
+            <li>Company Name : {{ object.total_emp }}</li>
+            <li>Company Name : {{ object.address }}</li>
+        </ol>
+
+        <a href="/update/{{ object.pk }}"  class="btn btn-primary"> Update Company </a>
+        <a href="/delete/{{ object.pk }}"  class="btn btn-danger"> Delete Company </a>
+
+    </div>
+</div>
+{% endblock %}

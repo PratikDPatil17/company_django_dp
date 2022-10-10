@@ -1,0 +1,19 @@
+<!doctype html>
+{% extends "testapp/base.html" %}
+
+{% block body_block %}
+<div class="container">
+    <div class="jumbotron">
+        <h1>Want to Delete?: {{ object.name }}</h1>
+        <hr>
+        
+        <form action="" method="POST">
+            
+            {% csrf_token %}
+
+            <input type="submit" class="btn btn-danger" value="Confirm Delete">
+        </form>
+
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,19 @@
+<!doctype html>
+{% extends "testapp/base.html" %}
+
+{% block body_block %}
+<div class="container">
+    <div class="jumbotron">
+        <h1>Add/Update company to Portal</h1>
+        <hr>
+        
+        <form action="" method="POST">
+            {{ form.as_p}}
+            {% csrf_token %}
+
+            <input type="submit" value="Add/Update Comp">
+        </form>
+
+    </div>
+</div>
+{% endblock %}
